@@ -1,49 +1,19 @@
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
-var app = {
-    // Application Constructor
-    initialize: function() {
-        this.bindEvents();
-    },
-    // Bind Event Listeners
-    //
-    // Bind any events that are required on startup. Common events are:
-    // 'load', 'deviceready', 'offline', and 'online'.
-    bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
-    },
-    // deviceready Event Handler
-    //
-    // The scope of 'this' is the event. In order to call the 'receivedEvent'
-    // function, we must explicity call 'app.receivedEvent(...);'
-    onDeviceReady: function() {
-        app.receivedEvent('deviceready');
-    },
-    // Update DOM on a Received Event
-    receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-
-        console.log('Received Event: ' + id);
-    }
-};
+function travel(){  
+    if (window.XMLHttpRequest)
+     {  // code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp=new XMLHttpRequest();
+     }
+    else
+     {  // code for IE6, IE5
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+     }
+        xmlhttp.open("GET","http://www.gopioneer.de/travel.xml",false);
+        xmlhttp.send();
+        xmlDoc=xmlhttp.responseXML;     
+        travels = xmlDoc.getElementsByTagName("website");
+        alert("travels:"+travels.length);
+        var websites = [];
+        var description = [];
+        var logos = [];     
+        for(var travel=0;travel<travels.length;travel++){ websitename="travels[travel].getElementsByTagName("sitename")[0].childNodes[0].nodeValue;" var="" websites.push(websitename);="" des="travels[travel].getElementsByTagName("Description")[0].childNodes[0].nodeValue;" description.push(des);="" images="travels[travel].getElementsByTagName("Image")[0].childNodes[0].nodeValue;" logos.push(images);="" }="" listview="document.getElementById("container");" ul="document.createElement("ul");" for(var="" i="0;i<websites.length;i++){" livalue="document.createTextNode(websites[i]);" desvalue="document.createTextNode(description[i]);" li="document.createElement("li");" table="document.createElement("table");" table1="document.createElement("table");" tr1="document.createElement("tr");" td1="document.createElement("td");" img="new" image();="" img.src="logos[i];" img.setattribute("width",60);="" img.setattribute("height",30);="" img.setattribute('onclick',="" "test()");="" td1.appendchild(img);="" tr1.appendchild(td1);="" tr2="document.createElement("tr");" td2="document.createElement("td");" td3="document.createElement("td");" td2.appendchild(livalue);="" td3.appendchild(desvalue);="" tr1.appendchild(td2);="" tr2.appendchild(td3);="" table.appendchild(tr1);="" table1.appendchild(tr2);="" li.appendchild(table);="" li.appendchild(table1);="" ul.appendchild(li);="" listview.appendchild(ul);="" <="" pre="">
+</travels.length;travel++){>
