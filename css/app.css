@@ -1,0 +1,39 @@
+
+*{margin:0;padding:0;}
+
+body{
+  background:#ddd;
+  font-family:'Open Sans',sans-serif;
+}
+
+h2 {
+  font-size: 19px;
+  color:#747474;
+  padding: 25px;
+}
+
+
+
+h1{
+  background:#3399cc;
+  padding:20px 0;
+  font-size:140%;
+  font-weight:300;
+  text-align:center;
+  color:#fff;
+}
+
+.item {
+	min-width: 460px;
+}
+.name, .code {
+	width: 50%;  
+	padding:20px 0;
+	font-size:140%;
+	text-align:center;
+	background-color: white; 
+	color:#333;
+}
+
+.name {float: left;}
+.code {float: right; }
